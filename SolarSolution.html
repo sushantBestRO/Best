@@ -147,9 +147,13 @@
       const url = `https://script.google.com/macros/s/AKfycbxL9zvGNjlDbt99uXbpVVtNB36U9pXWweSHOp9qOTbySVNZv6NbhIrrgW9j4LQCUh1Akw/exec?pickup=${encodeURIComponent(pickup)}&destination=${encodeURIComponent(destination)}&vehicleType=${encodeURIComponent(vehicleType)}&vehicleCount=${vehicleCount}&cont=${ContactNumber}&emialadd=${EmailAddress}`;
      fetch(url)
         .then(res => res.text())
-        .then(txt => alert(txt))
+        .then(txt => {
+            console.log(txt); // You can keep alert(txt) if you want
+            window.location.href = "https://sushantbestro.github.io/Best/Thankyou";
+        })
         .catch(err => alert("Error: " + err));
     }
   </script>
 </body>
 </html>
+
